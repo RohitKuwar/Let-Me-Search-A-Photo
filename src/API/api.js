@@ -20,7 +20,7 @@ export const getImages = async () => {
 };
 
 export const searchImages = async (search) => {
-  const queryParams = `search/photos?per_page=30&query=${search}`;
+  const queryParams = `search/photos?per_page=50&query=${search}`;
 
   try {
     const res = await fetch(`${baseURL}/${queryParams}`, {
