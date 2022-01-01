@@ -1,5 +1,15 @@
 .gridContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  column-count: 3;
+  column-gap: 8px;
+  padding: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .gridContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
 }

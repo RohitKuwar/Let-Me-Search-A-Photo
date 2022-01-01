@@ -2,18 +2,19 @@
   list-style: none;
 }
 img {
-  list-style: none;
-  padding: 5px;
-  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 4px;
   border-radius: 10px;
-  /* height: 90%; */
+  cursor: pointer;
 }
+/* commented for future use */
 /* img:hover {
   filter: grayscale(0.2) brightness(0.9);
 } */
 
 @media (min-width: 320px) and (max-width: 767px) {
   img {
-    width: 90vw;
+    width: 95vw;
   }
 }
