@@ -13,9 +13,6 @@ const Image = ({ imageDetails }) => {
       <div className={styles.overlay}>
         <span>&#10084; {imageDetails.likes}</span>
       </div>
-      {
-        console.log("imageDetails:", imageDetails)
-      }
     </li>
   );
 };
