@@ -10,6 +10,12 @@ const Image = ({ imageDetails }) => {
         key={imageDetails.id} 
         alt={imageDetails.alt_description}
       />
+      <div className={styles.overlay}>
+        <span>&#10084; {imageDetails.likes}</span>
+      </div>
+      {
+        console.log("imageDetails:", imageDetails)
+      }
     </li>
   );
 };
