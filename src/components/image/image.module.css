@@ -20,10 +20,14 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .overlay span {
   font-size: 1.5rem;
-  cursor: pointer;
+  margin: 0 5px;
+}
+.overlay span .heart:hover {
+  color: red;
 }
 .imageContainer:hover img {
   filter: grayscale(0.5) brightness(0.5);
