@@ -7,9 +7,11 @@ import styles from './image.module.css'
 
 const Image = ({ imageDetails }) => {
   const [click, setClick] = useState(false)
+  
   const toggle = () => {
     return click ? setClick(false) : setClick(true)
   }
+
   const download = () => {
     axios({
       url: imageDetails.urls.regular,
@@ -34,7 +36,9 @@ const Image = ({ imageDetails }) => {
         alt={imageDetails.alt_description}
       />
       <div className={styles.overlay}>
-        <span><FontAwesomeIcon icon={faHeart} size="lg" style={{color: click ? 'red' : 'white'}} onClick={toggle} />
+        <span>
+          <FontAwesomeIcon icon={faHeart} size="lg" style={{color: click ? 'red' : 'white'}} onClick={toggle} />
+          &nbsp;
           {click ? imageDetails.likes + 1 : imageDetails.likes}
         </span>
         <span>
