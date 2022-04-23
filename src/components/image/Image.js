@@ -34,6 +34,7 @@ const Image = ({ imageDetails }) => {
         src={imageDetails.urls.regular} 
         key={imageDetails.id} 
         alt={imageDetails.alt_description}
+        loading="lazy"
       />
       <div className={styles.overlay}>
         <span>
