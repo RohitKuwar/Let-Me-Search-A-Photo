@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px;
+}
+.container .sun {
+  cursor: pointer;
+  color: #f7bb07;
+}
+.container .moon {
+  cursor: pointer;
+  color: white;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    display: none;
+  }
+}

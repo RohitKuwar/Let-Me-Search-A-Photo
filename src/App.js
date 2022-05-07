@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getImages, searchImages } from "./API/api";
 import Gallery from "./components/gallery/Gallery";
 import SearchBox from "./components/searchbox/SearchBox";
+import DarkThemeIcon from "./components/dark-theme/DarkThemeIcon";
 import './App.css'
 
 const App = () => {
@@ -9,6 +10,16 @@ const App = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [theme, setTheme] = useState('light');
+  const setMode = (mode) => {
+    window.localStorage.setItem('theme', mode);
+    setTheme(mode);
+  };
+
+  const themeToggler = () => {
+    const toggle = theme === 'light' ? setMode('dark') : setMode('light');
+    return toggle;
+  };
 
   const handleData = (data, error) => {
     setLoading(true);
@@ -19,6 +30,11 @@ const App = () => {
     }
     setLoading(false);
   };
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    setTheme(localTheme);
+  }, []);
 
   useEffect(() => {
     const getImageData = async () => {
@@ -39,7 +55,11 @@ const App = () => {
   }, [search])
 
   return (
-    <div>
+    <div
+      data-theme={theme}
+      style={{ background: theme === 'light' ? 'white' : 'black' }}
+    >
+      <DarkThemeIcon theme={theme} themeToggleHandler={themeToggler} />
       <h1>Photo Search App</h1>
       <SearchBox search={search} setSearch={setSearch} />
       <div className="photo-container">
