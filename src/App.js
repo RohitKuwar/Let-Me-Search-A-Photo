@@ -29,6 +29,7 @@ const App = () => {
   };
 
   // Use useCallback to memoize the debounced function
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedFetchImages = useCallback(
     debounce((query) => {
       fetchImages(query);
