@@ -20,8 +20,12 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  pointer-events: none; /* Prevent the overlay from intercepting clicks */
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+.overlay div {
+  pointer-events: auto; /* Allow clicks on children of the overlay */
 }
 .overlay span {
   font-size: 1.1rem;

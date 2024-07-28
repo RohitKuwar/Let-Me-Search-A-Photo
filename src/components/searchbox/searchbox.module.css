@@ -1,21 +1,16 @@
 .searchContainer {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  margin: auto;
   max-width: 400px;
-  width: 80%;
+  width: 90%;
   margin-bottom: 20px;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid #333;
-  padding: 0 15px;
-  font-size: 18px;
+  z-index: 99;
 }
-/* .searchContainer input {
+
+.searchContainer input {
   height: 40px;
   border-radius: 5px;
   border: 1px solid #333;
   padding: 0 15px;
   font-size: 18px;
   width: 90%;
-} */
+}
