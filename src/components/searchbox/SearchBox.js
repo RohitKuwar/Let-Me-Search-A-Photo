@@ -7,7 +7,7 @@ const SearchBox = ({ search, setSearch }) => {
     <input
       type="text"
       value={search}
-      placeholder="Search photos"
+      placeholder="Search photo"
       onChange={(e) => setSearch(e.target.value)}
       className={styles.searchContainer}
     />
